@@ -12,7 +12,7 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/login" component={LoginForm} />
-      <Route exact path="/" component={Home} />
+      <Route exact path="React-ecommerce/" component={Home} />
       <Route exact path="/products" component={Products} />
       <Route exact path="/cart" component={Cart} />
       <Route component={NotFound} />
