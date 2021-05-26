@@ -8,7 +8,7 @@ const Header = props => {
   const onClickLogout = () => {
     Cookie.remove('jwt_token')
     const {history} = props
-    history.replace('/login')
+    history.replace('/React-ecommerce/login')
   }
   return (
     <nav className="nav-header">
@@ -19,13 +19,13 @@ const Header = props => {
           alt="website logo"
         />
         <ul className="nav-menu">
-          <Link to="/" className="nav-link">
+          <Link to="/React-ecommerce" className="nav-link">
             <li>Home</li>
           </Link>
-          <Link to="/products" className="nav-link">
+          <Link to="/React-ecommerce/products" className="nav-link">
             <li>Products</li>
           </Link>
-          <Link to="/cart" className="nav-link">
+          <Link to="/React-ecommerce/cart" className="nav-link">
             <li>Cart</li>
           </Link>
         </ul>

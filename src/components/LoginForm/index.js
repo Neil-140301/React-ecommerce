@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
-
 import './index.css'
 
 class LoginForm extends Component {
@@ -20,18 +19,14 @@ class LoginForm extends Component {
     this.setState({password: event.target.value})
   }
 
-  onSubmitSuccess = jwtTkoken => {
+  onSubmitSuccess = jwtToken => {
     const {history} = this.props
 
-    Cookies.set('jwt_token', jwtTkoken, {
-      expires: 30,
-      path: '/',
-    })
-    history.replace('/')
+    Cookies.set('jwt_token', jwtToken, {expires: 30})
+    history.replace('/React-ecommerce')
   }
 
   onSubmitFailure = errorMsg => {
-    console.log(errorMsg)
     this.setState({showSubmitError: true, errorMsg})
   }
 
@@ -63,7 +58,7 @@ class LoginForm extends Component {
         <input
           type="password"
           id="password"
-          className="password-input-field"
+          className="password-input-filed"
           value={password}
           onChange={this.onChangePassword}
         />
@@ -81,7 +76,7 @@ class LoginForm extends Component {
         <input
           type="text"
           id="username"
-          className="username-input-field"
+          className="username-input-filed"
           value={username}
           onChange={this.onChangeUsername}
         />
@@ -90,11 +85,11 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {showSubmitError, errorMsg} = this.state
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      return <Redirect to="/" />
+      return <Redirect to="/React-ecommerce" />
     }
+    const {showSubmitError, errorMsg} = this.state
     return (
       <div className="login-form-container">
         <img
