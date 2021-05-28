@@ -10,3 +10,7 @@
 - Integrating APIs
   - Get All Products
 
+### Login Credentials
+
+- username: rahul
+- password: rahul@2021
