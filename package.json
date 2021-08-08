@@ -1,5 +1,6 @@
 {
   "name": "app-name",
+  "homepage": "https://neil-140301.github.io/React-ecommerce",
   "private": true,
   "version": "1.0.0",
   "engines": {
@@ -22,6 +23,7 @@
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "3.3.1",
+    "gh-pages": "3.2.3",
     "husky": "4.3.8",
     "lint-staged": "10.5.4",
     "npm-run-all": "4.1.5",
@@ -29,6 +31,8 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
